@@ -6,3 +6,22 @@
     {{friend.id}} - {{friend.firstName}} {{friend.lastName}}
 </div>
 {{/md-collection}}
+
+{{#md-collection content=model as |friend|}}
+    {{#link-to 'friends.show' friend class='collection-item'}}
+    <i class="mdi-action-favorite blue-text text-lighten-2"></i>
+    {{friend.id}} - {{friend.fullName}}
+    {{/link-to}}
+{{/md-collection}}
+
+{{#md-collection content=model as |friend|}}
+<div class="collection-item avatar">
+    <i class="circle blue mdi-action-favorite"></i>
+    <span class="title">{{friend.email}}</span>
+    <p>{{friend.firstName}} {{friend.lastName}}</p>
+    {{#link-to 'friends.show' friend class='secondary-content'}}
+        <i class="mdi-action-favorite"></i>
+        {{friend.id}}
+    {{/link-to}}
+</div>
+{{/md-collection}}
