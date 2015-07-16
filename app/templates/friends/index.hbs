@@ -4,6 +4,7 @@
 <div class="collection-item">
     <i class="mdi-action-favorite blue-text text-lighten-2"></i>
     {{friend.id}} - {{friend.firstName}} {{friend.lastName}}
+    <a class="secondary-content btn-flat waves-effect waves-light lime" href="#" {{action 'delete' friend}}>Delete</a>
 </div>
 {{/md-collection}}
 
