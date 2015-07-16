@@ -1,6 +1,12 @@
-<h2 id="title">Welcome to Ember.js</h2>
+{{partial 'partials/header'}}
 
-{{outlet}}
+<div class="container">
+    <h2 id="title">Welcome to Ember.js</h2>
+
+    {{outlet}}
+</div>
 
 {{!-- ember-cli-materialize modal container --}}
 {{md-modal-container}}
+
+{{partial 'partials/footer'}}

@@ -1,0 +1,8 @@
+<h5>Total friends: {{model.length}}</h5>
+
+{{#md-collection content=model header='All Friends' as |friend|}}
+<div class="collection-item">
+    <i class="mdi-action-favorite blue-text text-lighten-2"></i>
+    {{friend.id}} - {{friend.firstName}} {{friend.lastName}}
+</div>
+{{/md-collection}}
