@@ -1,0 +1,7 @@
+<h6 class="orange-text">+---- Articles</h6>
+
+{{#md-collection content=model header='Article lists' as |article|}}
+  <div class='collection-item'>
+    {{article.createdAt}} - {{article.description}}
+  </div>
+{{/md-collection}}
