@@ -1,6 +1,6 @@
 <td>{{article.description}}</td>
 <td>{{article.notes}}</td>
-<td>{{article.createdAt}}</td>
+<td>{{moment article.createdAt 'YYYY/MM/DD'}}</td>
 <td>{{view "select" content=articleStates selection=article.state}}</td>
 
 <td>
