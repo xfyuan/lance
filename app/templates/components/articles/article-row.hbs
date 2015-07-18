@@ -1,0 +1,12 @@
+<td>{{article.description}}</td>
+<td>{{article.notes}}</td>
+<td>{{article.createdAt}}</td>
+<td>{{view "select" content=articleStates selection=article.state}}</td>
+
+<td>
+    {{#if article.isSaving}}
+        <p class="pink-text">Saving ...</p>
+    {{else if article.isDirty}}
+        <button {{action 'saveArticle' article}}>Save</button>
+    {{/if}}
+</td>
