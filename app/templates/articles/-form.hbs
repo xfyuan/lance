@@ -1,0 +1,9 @@
+<form {{action "save" on="submit"}}>
+    <h6 class="red-text">{{errorMessage}}</h6>
+
+    {{md-input value=model.description label="Description"}}
+    {{md-input value=model.notes label="Notes"}}
+
+    {{md-btn-submit icon='mdi-content-send' iconPosition='right' text='Submit'}}
+    {{md-btn text='Cancel' action='cancel' class='grey'}}
+</form>
