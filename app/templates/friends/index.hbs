@@ -1,12 +1,25 @@
 <h5>Total friends: {{model.length}}</h5>
 
-{{#md-collection content=model header='All Friends' as |friend|}}
-<div class="collection-item">
-    <i class="mdi-action-favorite blue-text text-lighten-2"></i>
-    {{friend.id}} - {{friend.firstName}} {{friend.lastName}}
-    <a class="secondary-content btn-flat waves-effect waves-light lime" href="#" {{action 'delete' friend}}>Delete</a>
-</div>
-{{/md-collection}}
+<table class="hoverable">
+    <thead>
+        <tr>
+            <th {{action 'setSortBy' 'firstName'}}>Name</th>
+            <th {{action 'setSortBy' 'totalArticles'}}>Articles</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each friend in model}}
+            <tr>
+                <td>{{link-to friend.fullName 'articles' friend}}</td>
+                <td>{{friend.totalArticles}}</td>
+                <td>
+                    <a class="btn waves-effect waves-light lime" href="#" {{action 'delete' friend}}>Delete</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
 
 {{#md-collection content=model as |friend|}}
     {{#link-to 'articles' friend class='collection-item'}}
