@@ -28,10 +28,13 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV.host = 'http://api.ember-cli-101.com';
   }
 
   if (environment === 'test') {
     // Testem prefers this...
+    ENV.host = 'http://api.ember-cli-101.com';
     ENV.baseURL = '/';
     ENV.locationType = 'none';
 
