@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        {{#each friend in model}}
+        {{#each model as |friend|}}
             <tr>
                 <td>{{link-to friend.fullName 'articles' friend}}</td>
                 <td>{{friend.totalArticles}}</td>
