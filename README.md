@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/xfyuan/lance.svg)](https://travis-ci.org/xfyuan/lance)
+[![Code Climate](https://codeclimate.com/github/xfyuan/lance/badges/gpa.svg)](https://codeclimate.com/github/xfyuan/lance)
+[![Test Coverage](https://codeclimate.com/github/xfyuan/lance/badges/coverage.svg)](https://codeclimate.com/github/xfyuan/lance/coverage)
 
 # Lance
 
@@ -52,4 +54,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
