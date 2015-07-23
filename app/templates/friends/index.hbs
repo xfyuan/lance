@@ -1,0 +1,41 @@
+<h5>Total friends: {{model.length}}</h5>
+
+<table class="hoverable">
+    <thead>
+        <tr>
+            <th {{action 'setSortBy' 'firstName'}}>Name</th>
+            <th {{action 'setSortBy' 'totalArticles'}}>Articles</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model as |friend|}}
+            <tr>
+                <td>{{link-to friend.fullName 'articles' friend}}</td>
+                <td>{{friend.totalArticles}}</td>
+                <td>
+                    <a class="btn waves-effect waves-light lime" href="#" {{action 'delete' friend}}>Delete</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{#md-collection content=model as |friend|}}
+    {{#link-to 'articles' friend class='collection-item'}}
+    <i class="mdi-action-favorite blue-text text-lighten-2"></i>
+    {{friend.id}} - {{friend.fullName}}
+    {{/link-to}}
+{{/md-collection}}
+
+{{#md-collection content=model as |friend|}}
+<div class="collection-item avatar">
+    <i class="circle blue mdi-action-favorite"></i>
+    <span class="title">{{friend.email}}</span>
+    <p>{{friend.firstName}} {{friend.lastName}}</p>
+    {{#link-to 'friends.show' friend class='secondary-content'}}
+        <i class="mdi-action-favorite"></i>
+        {{friend.id}}
+    {{/link-to}}
+</div>
+{{/md-collection}}

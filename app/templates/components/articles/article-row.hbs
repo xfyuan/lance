@@ -1,0 +1,10 @@
+<td>{{article.description}}</td>
+<td>{{article.notes}}</td>
+<td>{{moment article.createdAt 'YYYY/MM/DD'}}</td>
+<td>{{view "select" content=articleStates selection=article.state}}</td>
+
+<td>
+    {{#if article.isSaving}}
+        <p class="pink-text">Saving ...</p>
+    {{/if}}
+</td>

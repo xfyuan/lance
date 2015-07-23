@@ -1,0 +1,19 @@
+<h3>Friend profile</h3>
+
+<p>
+{{link-to 'Back to friends' 'friends' class='btn waves-effect waves-light pink'}}
+{{link-to 'Edit profile' 'friends.edit' model class='btn waves-effect waves-light green'}}
+</p>
+
+<ul class="collection">
+    <li class="collection-item">First name: {{model.firstName}}</li>
+    <li class="collection-item">Last name: {{model.lastName}}</li>
+    <li class="collection-item">Email: {{model.email}}</li>
+    <li class="collection-item">Twitter: {{model.twitter}}</li>
+</ul>
+
+<div class="articles">
+{{link-to 'Lend articles' 'articles.new' model class='btn waves-effect waves-light green'}}
+
+{{outlet}}
+</div>

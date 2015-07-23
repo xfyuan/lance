@@ -1,0 +1,24 @@
+<h6 class="orange-text">+---- Articles</h6>
+
+{{#md-collection content=model header='Article lists' as |article|}}
+  <div class='collection-item'>
+    {{article.createdAt}} - {{article.description}}
+  </div>
+{{/md-collection}}
+
+<table class="hoverable">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Notes</th>
+            <th>Borrowed since</th>
+            <th>xx</th>
+            <th>zz</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model as |article|}}
+            {{articles/article-row article=article save='save' articleStates=possibleStates}}
+        {{/each}}
+    </tbody>
+</table>
