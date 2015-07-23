@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/xfyuan/lance.svg)](https://travis-ci.org/xfyuan/lance)
+
 # Lance
 
 This README outlines the details of collaborating on this Ember application.
